@@ -2,12 +2,12 @@
     margin: 0 auto;
     height: auto;
     width: auto;
-    border: 1px solid #cf0f0f;
+    // border: 1px solid #cf0f0f;
 }
 
 body > .top-page {
     background: url(/assets/background_1.png) no-repeat center;
-    margin-bottom: 10%;
+    // margin-bottom: 10%;
     align-items: center;
     background-size: cover;
     text-align: center;
@@ -48,6 +48,9 @@ body > .top-page {
             display: none;
         }
     }
+    img {
+        position: inherit;
+    }
     h1 {
         font-family: $top-page-font;
         font-weight: 700;
@@ -63,111 +66,139 @@ body > .top-page {
 
 }
 
-// font-family: 'Source Sans Pro';
-// font-style: normal;
-// letter-spacing: 0.1em;
-// font-size: 20px;
-// margin-right: 10%;
-
-
-// header {
-//     // padding: 3% 10% 0%;
-//     // display: flex;
-//     // margin-bottom: 10%;
-//     // text-transform: uppercase;
-//     // align-items: center;
-//     a {
-//         text-decoration: none;
-//         color: rgba(255, 255, 255, 1);
-//     }
-//     ul {
-//         margin: 0;
-//         padding: 0;
-//         list-style-type: none;
-//         font-family: 'Source Sans Pro';
-//         font-style: normal;
-//         letter-spacing: 0.2em;
-//         font-size: 14px;
-//         display: flex;
-//         justify-content: space-around;
-//         align-items: center;
-//         width: 100%;
-//     }
-//     .nav__item:nth-child(1) {
-//         font-family: 'Source Sans Pro';
-//         font-style: normal;
-//         letter-spacing: 0.1em;
-//         font-size: 20px;
-//         margin-right: 10%;
-//     }
-//     .nav__item--display-toggle {
-//         display: none;
-//     }
-// }
-
-// .top-page {
-//     background: url(/assets/background_1.png) no-repeat center;
-//     background-size: cover;
-//     text-align: center;
-//     padding: 0% 0% 10%;
-//     color: white;
-//     position: relative;
-//     overflow: hidden;
-// }
-
-.middle-page {
+body > .middle-page {
     background: white no-repeat center;
     text-align: center;
     color: rgba(70, 69, 71, 1);
     padding: 5% 5%;
-
-}
-.bottom-page {
-    background: url(/assets/background_2.png) no-repeat center;
-    background-size: cover;
-    text-align: center;
-    padding: 5% 0%;
-    color: white;
-}
-
-footer {
-    font-family: 'Source Sans Pro', sans-serif;
-    background: $footer-background;
-    padding: 0.5% 7%;
-    color: white;
-    display: flex;
-    p:nth-child(1) {
-        letter-spacing: 0.2em;
-        font-size: 18px;
+    h1 {
+        font-family: $top-page-font;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+    }
+    h2 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: rgba(102, 102, 102, 1);   
+    }
+    .middle-page__paragraph-container {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: left;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 1);
         display: flex;
-        align-items: flex-start;
-        padding-left: 1%;
-        padding-top: 1%;
-        width: 20%;
+        flex-direction: row;
+        column-gap: 10%;
+        p {
+            width: 100%;
+            margin: 0 5%;
+        }
     }
-    .contact-info {
-        color: rgba(255, 255, 255, 0.4);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        margin-left: 0;
-        width: 60%;
-    }
-    p:last-child {
-        color: rgba(255, 255, 255, 0.4);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        margin-left: 0;
-        width: 20%;
-        display: inline-block;
-        align-self: flex-end;
-    }
-    .contact-info a {
+    button {
+        font-family: 'Oswald', sans-serif;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+        color: white;
+        padding: 0.5% 3%;
+        margin: 3% 0;
+        text-align: center;
         text-decoration: none;
-        color: rgba(255, 255, 255, 0.4);
+        display: inline-block;
+        background: #55C2D8;
+        border-radius: 36px;
+        border: none;
+    }
+
+}
+
+body {
+    .bottom-page {
+        background: url(/assets/background_2.png) no-repeat center;
+        background-size: cover;
+        text-align: center;
+        padding: 5% 0%;
+        color: white;
+        h1 {
+            font-family: $top-page-font;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 64px;
+        }
+        button {
+            font-family: 'Oswald', sans-serif;
+            font-size: 70px;
+            color: white;
+            width: 150px;
+            height: 150px;
+            padding: 0px 0px 15px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            background: #55C2D8;
+            border-radius: 75px;
+            border: none;
+        }
+        h2 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            color: white;
+        }
     }
 }
 
+body {
+    footer {
+        font-family: 'Source Sans Pro', sans-serif;
+        background: $footer-background;
+        padding: 0.5% 7%;
+        color: white;
+        display: flex;
+        .contact-info {
+            color: rgba(255, 255, 255, 0.4);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            margin-left: 0;
+            width: 60%;
+            > p > i {
+                font-style: normal;
+            }
+            a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+        > p:nth-child(1) {
+            letter-spacing: 0.2em;
+            font-size: 18px;
+            display: flex;
+            align-items: flex-start;
+            padding-left: 1%;
+            padding-top: 1%;
+            width: 20%;
+        }
+        > p:last-child {
+            color: rgba(255, 255, 255, 0.4);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            margin-left: 0;
+            width: 20%;
+            display: inline-block;
+            align-self: flex-end;
+        }
+    }
+}

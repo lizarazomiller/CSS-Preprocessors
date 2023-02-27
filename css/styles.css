@@ -2,12 +2,10 @@
   margin: 0 auto;
   height: auto;
   width: auto;
-  border: 1px solid #cf0f0f;
 }
 
 body > .top-page {
   background: url(/assets/background_1.png) no-repeat center;
-  margin-bottom: 10%;
   align-items: center;
   background-size: cover;
   text-align: center;
@@ -49,6 +47,9 @@ body > .top-page .nav__list li a {
 body > .top-page .nav__list .nav__item--display-toggle {
   display: none;
 }
+body > .top-page img {
+  position: inherit;
+}
 body > .top-page h1 {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
@@ -62,38 +63,102 @@ body > .top-page h2 {
   line-height: 32px;
 }
 
-.middle-page {
+body > .middle-page {
   background: white no-repeat center;
   text-align: center;
   color: rgb(70, 69, 71);
   padding: 5% 5%;
 }
+body > .middle-page h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+}
+body > .middle-page h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: rgb(102, 102, 102);
+}
+body > .middle-page .middle-page__paragraph-container {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  line-height: 22px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  column-gap: 10%;
+}
+body > .middle-page .middle-page__paragraph-container p {
+  width: 100%;
+  margin: 0 5%;
+}
+body > .middle-page button {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: white;
+  padding: 0.5% 3%;
+  margin: 3% 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background: #55C2D8;
+  border-radius: 36px;
+  border: none;
+}
 
-.bottom-page {
+body .bottom-page {
   background: url(/assets/background_2.png) no-repeat center;
   background-size: cover;
   text-align: center;
   padding: 5% 0%;
   color: white;
 }
+body .bottom-page h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+}
+body .bottom-page button {
+  font-family: "Oswald", sans-serif;
+  font-size: 70px;
+  color: white;
+  width: 150px;
+  height: 150px;
+  padding: 0px 0px 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background: #55C2D8;
+  border-radius: 75px;
+  border: none;
+}
+body .bottom-page h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: white;
+}
 
-footer {
+body footer {
   font-family: "Source Sans Pro", sans-serif;
   background: #464547;
   padding: 0.5% 7%;
   color: white;
   display: flex;
 }
-footer p:nth-child(1) {
-  letter-spacing: 0.2em;
-  font-size: 18px;
-  display: flex;
-  align-items: flex-start;
-  padding-left: 1%;
-  padding-top: 1%;
-  width: 20%;
-}
-footer .contact-info {
+body footer .contact-info {
   color: rgba(255, 255, 255, 0.4);
   font-style: normal;
   font-weight: 400;
@@ -102,7 +167,23 @@ footer .contact-info {
   margin-left: 0;
   width: 60%;
 }
-footer p:last-child {
+body footer .contact-info > p > i {
+  font-style: normal;
+}
+body footer .contact-info a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+body footer > p:nth-child(1) {
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 1%;
+  padding-top: 1%;
+  width: 20%;
+}
+body footer > p:last-child {
   color: rgba(255, 255, 255, 0.4);
   font-style: normal;
   font-weight: 400;
@@ -113,10 +194,6 @@ footer p:last-child {
   display: inline-block;
   align-self: flex-end;
 }
-footer .contact-info a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
-}
 
 @media only screen and (max-width: 768px) {
   body > .top-page {
@@ -126,7 +203,6 @@ footer .contact-info a {
   body > .top-page .nav__list {
     display: flex;
     margin-bottom: 40%;
-    background-color: rgba(195, 0, 255, 0.63);
     width: auto;
     padding: 5%;
     justify-content: space-between;
@@ -182,6 +258,18 @@ footer .contact-info a {
     animation: dotsGlowing 3s ease-in-out alternate infinite running;
   }
 }
+.top-page img:hover {
+  animation: flipScale 2s ease-in-out alternate infinite running;
+}
+
+.middle-page button:hover {
+  animation: hangText 2s cubic-bezier(0.96, -0.02, 0, 1.02) alternate infinite running;
+}
+
+.bottom-page button:hover {
+  animation: colorSwap 1s ease-in-out alternate infinite running;
+}
+
 @keyframes flipScale {
   100% {
     transform: rotateY(180deg) scale(1.8, 1.8);
@@ -200,7 +288,7 @@ footer .contact-info a {
   }
 }
 .top-page .dots-effect {
-  background: url(assets/lights_dots.png) no-repeat center;
+  background: url(/assets/lights_dots.png) no-repeat center;
   position: absolute;
   background-size: cover;
   width: 100%;
@@ -209,7 +297,7 @@ footer .contact-info a {
 }
 
 .top-page .trees-effect {
-  background: url(assets/lights_tree.png) no-repeat center;
+  background: url(/assets/lights_tree.png) no-repeat center;
   position: absolute;
   background-size: cover;
   width: 100%;

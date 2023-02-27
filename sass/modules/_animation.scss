@@ -1,3 +1,15 @@
+.top-page img:hover {
+    animation: flipScale 2s ease-in-out alternate infinite running;
+}
+
+.middle-page button:hover {
+    animation: hangText 2s cubic-bezier(0.96,-0.02, 0, 1.02) alternate infinite running;
+}
+
+.bottom-page button:hover {
+    animation: colorSwap 1s ease-in-out alternate infinite running;
+}
+
 @keyframes flipScale {
     100% {transform: rotateY(180deg) scale(1.8,1.8);}
 }
@@ -13,7 +25,7 @@
 }
 
 .top-page .dots-effect {
-    background: url(assets/lights_dots.png) no-repeat center;
+    background: url(/assets/lights_dots.png) no-repeat center;
     position: absolute;
     background-size: cover;
     width: 100%;
@@ -22,7 +34,7 @@
 }
 
 .top-page .trees-effect {
-    background: url(assets/lights_tree.png) no-repeat center;
+    background: url(/assets/lights_tree.png) no-repeat center;
     position: absolute;
     background-size: cover;
     width: 100%;
