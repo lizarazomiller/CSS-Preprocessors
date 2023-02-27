@@ -1,0 +1,74 @@
+@media only screen and (max-width: 768px) {
+    .top-page {
+        padding: 0 0 40%;
+    }
+    .middle-page {
+        text-align: left;
+        padding-bottom: 10%;
+    }
+    .middle-page-paragraph-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .middle-page-paragraph-container p {
+        width: 100%;
+        margin: 0;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer > p:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .contact-info {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+    }
+    footer > p:last-child {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+    }
+    header {
+        display: flex;
+        margin-bottom: 40%;
+        align-items: center;
+        padding: 5%;
+    }
+    header > a {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+    }
+    ul li:not(:nth-child(5)) {
+        display: none;
+    }
+    header .nav-icon {
+        display: inline-flex;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    body .top-page {
+        background-position-x: right;
+    }
+    body >.top-page > .trees-effect {
+        background-position-x: 96%;
+        animation: dotsGlowing 3s ease-in-out alternate infinite running;
+    }
+}

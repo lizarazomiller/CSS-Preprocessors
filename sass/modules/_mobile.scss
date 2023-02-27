@@ -1,0 +1,64 @@
+@media only screen and (max-width: 768px) {
+    body > .top-page {
+        padding: 0 0 40%;
+        background-position-x: right;
+        .nav__list {
+            display: flex;
+            margin-bottom: 40%;
+            background-color: rgba(195, 0, 255, 0.63);
+            width: auto;
+            padding: 5%;
+            justify-content: space-between;
+            li {
+                margin: 0;
+                &:not(:nth-child(1)) {
+                display: none;
+                }
+            }
+            .nav__item.nav__item--display-toggle {
+                display: inline-flex;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+    body > .middle-page {
+        text-align: left;
+        padding-bottom: 10%;
+        .middle-page__paragraph-container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            p {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+    body > footer {
+        flex-direction: column;
+        > p:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .contact-info {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            p {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        p:nth-child(3) {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+        }
+    }
+    body >.top-page > .trees-effect {
+        background-position-x: 96%;
+        animation: dotsGlowing 3s ease-in-out alternate infinite running;
+    }
+}
